@@ -12,6 +12,12 @@ public class Practice03OnDrawLayout extends LinearLayout {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     Pattern pattern = new Pattern();
 
+    // 测试执行顺序
+    {
+        // 在这里插入 setWillNotDraw(false) 以启用完整的绘制流程
+        setWillNotDraw(false);
+    }
+
     public Practice03OnDrawLayout(Context context) {
         super(context);
     }
@@ -22,10 +28,6 @@ public class Practice03OnDrawLayout extends LinearLayout {
 
     public Practice03OnDrawLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    {
-        // 在这里插入 setWillNotDraw(false) 以启用完整的绘制流程
     }
 
     @Override
